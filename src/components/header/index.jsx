@@ -8,7 +8,6 @@ export const Header = () => {
         <Container>
             <Link to="/">
             <div className="title" title="Home">
-            
             <h1>Pokedex-porjeto</h1>
             </div>
             </Link>
