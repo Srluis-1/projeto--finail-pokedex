@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import pokeball from "../imagens/pokeball.png"
+
 
 
 export const Header = () => {
@@ -8,7 +8,7 @@ export const Header = () => {
         <Container>
             <Link to="/">
             <div className="title" title="Home">
-            <img src={pokeball} alt="" />
+            
             <h1>Pokedex-porjeto</h1>
             </div>
             </Link>
