@@ -1,6 +1,6 @@
 import axios from "axios";
 
-async function getListPokemon(offset) {
+async function GetListPokemon(offset) {
     const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`)
     
     const pokemonList = response.data.results
@@ -21,4 +21,4 @@ async function getListPokemon(offset) {
     return pokemonDetails
 }
 
-export {getListPokemon}
+export {GetListPokemon}

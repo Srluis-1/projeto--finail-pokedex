@@ -3,7 +3,7 @@ import { CardList } from "../components/cardList";
 import { ThemeTogglerButton } from "../components/themeTogglerButton/themeTogglerButton";
 import { ThemeContext } from "../context/themeToggler";
 import { Container } from "../style/home-style";
-import { getListPokemon } from "../srvices/GetlistPokemon";
+import { GetListPokemon } from "../srvices/GetListPokemon";
 import filter from "../components/imagens/filter-icon-white.png"
 
 export const Home = () => {
@@ -18,7 +18,7 @@ export const Home = () => {
             setLoading(true)
             try {
                 const fetchData = async () => {
-                    const pokemonData = await getListPokemon(offset)
+                    const pokemonData = await GetListPokemon(offset)
     
                     setPokeData(pokemonData);
                     setOffset(offset + 10)
@@ -34,7 +34,7 @@ export const Home = () => {
     }, [])
 
     async function handleClick() {
-        const newPokeData = await getListPokemon(offset);
+        const newPokeData = await GetListPokemon(offset);
         setPokeData(prevPokeData => [...prevPokeData, ...newPokeData])
         setOffset(offset + 10)
     }
